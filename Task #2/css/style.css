@@ -1,0 +1,191 @@
+*{
+	margin: 0 auto;
+	padding: 0;
+	outline: 0;
+}
+body{
+	height: 1600px;
+}
+.container{
+	/* width: 1200px; */
+	
+}
+.heart, .bounce{
+	width: 15%;
+	height: 300px;
+	padding: 30px;
+	text-align: center;	
+	box-sizing: border-box;	
+	display: inline-block;
+	vertical-align: top;
+}
+
+/******  heart animation { iteration.gif } *******/
+
+.heart .fas{
+	color: #FB7E6E;
+	font-size: 200px;
+	animation: pump 3s ease-in-out forwards;
+}
+@keyframes pump{
+	10%{ transform: scale(1); }
+	20%{ transform: scale(1.4);	}
+	30%{ transform: scale(1.2);	}
+	40%{ transform: scale(1.4);	}
+	55%{ transform: scale(1); }
+	70%{ transform: scale(1.4);	}
+	80%{ transform: scale(1.2);	}
+	90%{ transform: scale(1.4);	}
+	100%{ transform: scale(1); }		
+}
+
+/********  bounce animation { bounceIn.gif } *******/
+
+.bounce p{
+	color: #00CED2;
+	font-size: 50px;
+	animation: bounce 2s ease-in-out forwards;
+}
+@keyframes bounce {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}	
+	50% {
+		opacity: 1;
+		transform: scale(1.4);
+	}	
+	100% { transform: scale(1); }
+}
+
+/********  fall animation { timing.gif } *******/
+
+.fall{
+	position: relative;
+	width: 15%;
+	height: 300px;
+	box-sizing: border-box;	
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+.fall .fas{
+	position: absolute;
+	top: -200px;
+	font-size: 30px;			
+}
+.lightbule{
+	left: 0;
+	color: lightblue;
+	animation: fall 2.3s ease-in-out infinite ;
+}
+.red{
+	left: 40px;
+	color: red;
+	animation: fall 2.3s ease-in-out infinite .1s;
+}
+.blue{
+	left: 80px;
+	color: blue;
+	animation: fall 2.3s ease-in-out infinite .14s;
+}
+.yellow{
+	left: 120px;
+	color: yellow;
+	animation: fall 2.3s ease-in-out infinite;
+}
+.green{
+	left: 160px;
+	color: green;
+	animation: fall 2.3s ease-in-out infinite .18s;
+}
+.purple{
+	left: 200px;
+	color: purple;
+	animation: fall 2.3s ease-in-out infinite .07s;
+}
+@keyframes fall{
+	0%{ top:-100px; }
+	20%{ top:257px; }
+	35%{ top:237px; }			
+	45%{ top:250px; }
+	60%{ top:237px; }
+	85%{ top:257px; }			
+	100%{ top:-100px; }
+}
+
+
+
+/********  scale animation { fill.gif }  *******/
+
+.scale{
+	width: 24%;
+	height: 300px;
+	box-sizing: border-box;	
+	display: inline-block;
+	vertical-align: top;		
+	color: #000;
+	text-align: center;	
+	font-size: 30px;
+	margin-right: 30px;			
+}
+.scale p{			
+	width: 80%;
+}
+.scale h4{
+	padding: 20px;
+}
+.scale p:first-of-type{
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #00CED2;
+}
+.scale p:last-of-type{
+	border-radius: 10px;
+	padding: 20px;
+	background-color: #FF623F;
+}
+.scale:hover p:first-of-type{
+	animation:  scale 1s ease-in-out forwards;
+}
+.scale:hover p:last-of-type{
+	animation:  scale 1s ease-in-out;
+}
+@keyframes scale {
+	100% { transform: scale(1.2); }
+}
+
+
+/********  clock animation { hover to pause ( play.gif ) } *******/
+
+.clock{
+	position: relative;
+	width: 25%;
+	height: 700px;
+	text-align: center;	
+	box-sizing: border-box;	
+	display: inline-block;
+	vertical-align: top;
+}
+.clock .watch{
+	position: absolute;
+	top: 0;
+	left: 0;			
+	width: 100%;
+	height: 100%;
+}
+.clock .hand{
+	position: absolute;
+	top: 59%;
+	left: 48%;		
+	width: 25%;
+	transform-origin: 12px 12px;
+	animation: rotate 3s linear infinite ;
+}
+.clock:hover .hand{
+	animation-play-state: paused;
+}
+@keyframes rotate {
+	100% { transform: rotate(360deg); }
+}
+
